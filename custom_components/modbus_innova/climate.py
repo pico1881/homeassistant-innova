@@ -67,7 +67,7 @@ async def async_setup_platform(
 class InnovaFancoil(ClimateEntity):
     """Representation of a fancoil AC unit."""
 
-    _attr_fan_modes: ClassVar[list[str]] = ["auto", "silent", "night", "high"]
+    _attr_fan_modes: ClassVar[list[str]] = ["auto", "medium", "low", "high"]
     _attr_hvac_modes: ClassVar[list[str]] = [HVACMode.COOL, HVACMode.HEAT, HVACMode.OFF]
     _attr_supported_features = (
         ClimateEntityFeature.TARGET_TEMPERATURE
