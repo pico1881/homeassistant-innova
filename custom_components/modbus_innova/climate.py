@@ -67,7 +67,7 @@ async def async_setup_platform(
 class InnovaFancoil(ClimateEntity):
     """Representation of a fancoil AC unit."""
 
-    _attr_fan_modes: ClassVar[list[str]] = ["Auto", "Silent", "Night", "High"]
+    _attr_fan_modes: ClassVar[list[str]] = ["auto", "silent", "night", "high"]
     _attr_hvac_modes: ClassVar[list[str]] = [HVACMode.COOL, HVACMode.HEAT, HVACMode.OFF]
     _attr_supported_features = (
         ClimateEntityFeature.TARGET_TEMPERATURE
@@ -172,7 +172,7 @@ class InnovaFancoil(ClimateEntity):
         if hvac_mode == HVACMode.COOL:
             season = 5
         elif hvac_mode == HVACMode.HEAT:
-            season = 0
+            season = 3
         else:
             _LOGGER.error("Modbus error setting hvac mode")
             return
