@@ -43,8 +43,8 @@ PLATFORM_SCHEMA = CLIMATE_PLATFORM_SCHEMA.extend(
         vol.Optional(CONF_HUB, default=DEFAULT_HUB): cv.string,
         vol.Required(CONF_SLAVE): vol.All(int, vol.Range(min=0, max=254)),
         vol.Optional(CONF_NAME, default=DEVICE_DEFAULT_NAME): cv.string,
-        vol.Optional(CONF_MIN_TEMP, default=5): vol.All(int, vol.Range(min=5, max=40)),
-        vol.Optional(CONF_MAX_TEMP, default=40): vol.All(int, vol.Range(min=5, max=40)),
+        vol.Optional(CONF_MIN_TEMP, default=16): vol.All(int, vol.Range(min=16, max=28)),
+        vol.Optional(CONF_MAX_TEMP, default=28): vol.All(int, vol.Range(min=16, max=28)),
     }
 )
 
